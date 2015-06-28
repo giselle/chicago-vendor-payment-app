@@ -1,0 +1,7 @@
+<h1>Payments Made By City of Chicago</h1>
+
+<% @payments.each do |payment| %>
+  <h2><%= payment["vendor_name"] %></h2>
+  <h6><%= payment["check_date"] %></h6>
+  <h3><%= number_to_currency(payment["amount"]) %></h3>
+<% end %>
